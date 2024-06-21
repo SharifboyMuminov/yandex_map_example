@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:yandex_map_example/data/models/app_lat_lon.dart';
+import 'package:yandex_map_example/screens/maps/maps_screen.dart';
+import 'package:yandex_map_example/service/permission.dart';
+import 'package:yandex_mapkit/yandex_mapkit.dart';
 
 import 'screens/home_screen/home_screen.dart';
 
@@ -26,11 +30,15 @@ class MyApp extends StatelessWidget {
         ScreenUtil.init(context);
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          theme: ThemeData(useMaterial3: false),
+          theme: ThemeData(useMaterial3: true),
           home: child,
         );
       },
-      child: HomeScreen(),
+      child: const MapsScreen(),
     );
   }
+
+
+
+
 }
